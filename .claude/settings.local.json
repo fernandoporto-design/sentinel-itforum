@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx skills:*)",
+      "Read(//usr/local/bin/**)",
+      "Bash(command -v node npm npx)",
+      "Read(//opt/homebrew/**)",
+      "Bash(brew list:*)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

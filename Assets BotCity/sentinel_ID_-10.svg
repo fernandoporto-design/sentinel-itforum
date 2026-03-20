@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #00248f;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <line class="cls-1" x1="297.38" y1="589.98" x2="298.34" y2="484.22"/>
+  <line class="cls-1" x1="152.74" y1="549.82" x2="206.45" y2="458.71"/>
+  <line class="cls-1" x1="47.56" y1="442.73" x2="139.63" y2="390.67"/>
+  <line class="cls-1" x1="10.02" y1="297.38" x2="115.78" y2="298.34"/>
+  <line class="cls-1" x1="50.18" y1="152.74" x2="141.29" y2="206.45"/>
+  <line class="cls-1" x1="157.27" y1="47.56" x2="209.33" y2="139.63"/>
+  <line class="cls-1" x1="302.62" y1="10.02" x2="301.66" y2="115.78"/>
+  <line class="cls-1" x1="447.26" y1="50.18" x2="393.55" y2="141.29"/>
+  <line class="cls-1" x1="552.44" y1="157.27" x2="460.37" y2="209.33"/>
+  <line class="cls-1" x1="589.98" y1="302.62" x2="484.22" y2="301.66"/>
+  <line class="cls-1" x1="549.82" y1="447.26" x2="458.71" y2="393.55"/>
+  <line class="cls-1" x1="442.73" y1="552.44" x2="390.67" y2="460.37"/>
+</svg>

@@ -1,0 +1,577 @@
+{
+  "project": {
+    "name": "BotCity Sentinel — Landing Page",
+    "description": "Governança Python em Escala — Risk Assessment landing page for BotCity Sentinel product",
+    "language": "pt-BR",
+    "exportDate": "2026-03-20",
+    "version": "1.0"
+  },
+
+  "design": {
+    "tokens": {
+      "colors": {
+        "void": "#000014",
+        "deep": "#00248f",
+        "bright": "#003cf0",
+        "accent-light": "#3d8bff",
+        "white": "#ffffff",
+        "ghost": "rgba(255,255,255,0.06)",
+        "mist": "rgba(255,255,255,0.12)",
+        "smoke": "rgba(255,255,255,0.6)",
+        "fog": "rgba(255,255,255,0.65)",
+        "text": "rgba(255,255,255,0.88)",
+        "bright-glow": "rgba(0,60,240,0.25)"
+      },
+      "fonts": {
+        "title": "'Inter', sans-serif",
+        "body": "'Inter', sans-serif",
+        "mono": "'Space Mono', monospace"
+      },
+      "fontWeights": {
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      },
+      "easings": {
+        "out": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "smooth": "cubic-bezier(0.45, 0, 0.15, 1)"
+      },
+      "borderRadius": {
+        "small": "6px",
+        "medium": "10px",
+        "large": "12px",
+        "xl": "16px",
+        "pill": "100px"
+      }
+    },
+
+    "typography": {
+      "t-display": {
+        "fontFamily": "Inter",
+        "fontWeight": 300,
+        "letterSpacing": "-0.03em",
+        "lineHeight": 1.08
+      },
+      "t-heading": {
+        "fontFamily": "Inter",
+        "fontWeight": 300,
+        "letterSpacing": "-0.025em",
+        "lineHeight": 1.15
+      },
+      "t-subhead": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "lineHeight": 1.55
+      },
+      "t-body": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "lineHeight": 1.7
+      },
+      "t-label": {
+        "fontFamily": "Space Mono",
+        "fontWeight": 400,
+        "fontSize": "0.7rem",
+        "letterSpacing": "0.14em",
+        "textTransform": "uppercase"
+      },
+      "t-mono": {
+        "fontFamily": "Space Mono",
+        "fontWeight": 400
+      }
+    },
+
+    "layout": {
+      "container": {
+        "maxWidth": "1200px",
+        "padding": "clamp(24px, 5vw, 64px)"
+      },
+      "containerWide": {
+        "maxWidth": "1400px"
+      }
+    }
+  },
+
+  "components": {
+    "button": {
+      "base": {
+        "padding": "16px 36px",
+        "fontFamily": "Space Mono",
+        "fontSize": "0.72rem",
+        "fontWeight": 700,
+        "letterSpacing": "0.12em",
+        "textTransform": "uppercase",
+        "borderRadius": "100px"
+      },
+      "variants": {
+        "primary": {
+          "background": "#003cf0",
+          "color": "#ffffff",
+          "boxShadow": "0 0 40px rgba(0,60,240,0.25), 0 4px 16px rgba(0,0,0,0.3)",
+          "hover": {
+            "background": "#3d8bff",
+            "boxShadow": "0 0 60px rgba(0,60,240,0.4), 0 8px 32px rgba(0,0,0,0.3)",
+            "transform": "translateY(-2px)"
+          }
+        },
+        "ghost": {
+          "background": "transparent",
+          "color": "rgba(255,255,255,0.65)",
+          "border": "1px solid rgba(255,255,255,0.12)",
+          "hover": {
+            "color": "#ffffff",
+            "borderColor": "rgba(255,255,255,0.6)",
+            "background": "rgba(255,255,255,0.06)"
+          }
+        }
+      }
+    },
+
+    "navCta": {
+      "padding": "10px 24px",
+      "fontFamily": "Space Mono",
+      "fontSize": "0.7rem",
+      "letterSpacing": "0.1em",
+      "textTransform": "uppercase",
+      "color": "#ffffff",
+      "border": "1px solid rgba(255,255,255,0.12)",
+      "borderRadius": "100px"
+    },
+
+    "benefitCard": {
+      "padding": "40px",
+      "background": "rgba(255,255,255,0.06)",
+      "border": "1px solid rgba(255,255,255,0.06)",
+      "topAccent": "linear-gradient(90deg, #003cf0, #3d8bff)"
+    },
+
+    "riskCard": {
+      "padding": "32px 28px",
+      "background": "rgba(0,0,20,0.6)",
+      "border": "1px solid rgba(255,255,255,0.06)",
+      "textAlign": "center"
+    },
+
+    "formCard": {
+      "background": "rgba(0,0,20,0.5)",
+      "border": "1px solid rgba(255,255,255,0.12)",
+      "borderRadius": "16px",
+      "padding": "48px",
+      "topAccent": "linear-gradient(90deg, #00248f, #003cf0, #3d8bff)"
+    }
+  },
+
+  "animations": {
+    "reveal": {
+      "initial": { "opacity": 0, "transform": "translateY(32px)" },
+      "visible": { "opacity": 1, "transform": "translateY(0)" },
+      "duration": "0.8s",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "delays": ["0s", "0.1s", "0.2s", "0.3s", "0.4s", "0.5s"]
+    },
+    "sentinelPulse": {
+      "keyframes": {
+        "0%,100%": { "opacity": 0.14, "scale": 1 },
+        "50%": { "opacity": 0.22, "scale": 1.02 }
+      },
+      "duration": "8s"
+    },
+    "eyeRotate": { "duration": "30s", "direction": "normal" },
+    "ringsCounterRotate": { "duration": "45s", "direction": "reverse" },
+    "linesRotate": { "duration": "60s", "direction": "normal" },
+    "dotPulse": { "duration": "2s" },
+    "glowBreathe": { "duration": "6s" },
+    "scanLine": { "duration": "8s" }
+  },
+
+  "sections": [
+    {
+      "id": "nav",
+      "type": "navigation",
+      "position": "fixed",
+      "content": {
+        "logo": {
+          "src": "Assets BotCity/SVG/LOGO_WHITE.svg",
+          "alt": "BotCity",
+          "height": "28px"
+        },
+        "cta": {
+          "text": "Solicitar Assessment",
+          "href": "#form",
+          "hasArrowIcon": true
+        }
+      },
+      "behavior": {
+        "scrolledClass": "is-scrolled",
+        "scrollThreshold": 50,
+        "scrolledStyles": {
+          "padding": "14px 0",
+          "background": "rgba(0,0,20,0.85)",
+          "backdropFilter": "blur(20px)",
+          "borderBottom": "1px solid rgba(255,255,255,0.06)"
+        }
+      }
+    },
+
+    {
+      "id": "hero",
+      "type": "hero",
+      "minHeight": "100vh",
+      "decorations": [
+        { "type": "gridBackground", "class": "grid-bg" },
+        { "type": "scanLine", "class": "hero__scan" },
+        { "type": "radialGlow", "class": "hero__glow" },
+        { "type": "sentinelBackground", "src": "Assets BotCity/sentinel_ID_-14.svg", "opacity": 0.18 }
+      ],
+      "content": {
+        "label": {
+          "text": "Risk Assessment",
+          "hasPulsingDot": true,
+          "color": "#3d8bff"
+        },
+        "title": {
+          "html": "Libere Python e AI<br>na sua empresa com<br><em>visibilidade e governança</em>",
+          "fontSize": "clamp(2.8rem, 5.5vw, 4.5rem)",
+          "emphasisGradient": "linear-gradient(135deg, #3d8bff, #003cf0)"
+        },
+        "subtitle": {
+          "text": "Python já está rodando nos seus endpoints. Saiba como governar esse uso para escalar com segurança e consistência operacional.",
+          "fontSize": "clamp(1rem, 1.4vw, 1.2rem)",
+          "color": "rgba(255,255,255,0.65)"
+        },
+        "body": {
+          "text": "Converse com especialistas da BotCity e descubra como trazer visibilidade para automações em Python já rodando nas estações de trabalho da sua empresa.",
+          "fontSize": "clamp(0.9rem, 1.2vw, 1rem)",
+          "color": "rgba(255,255,255,0.6)"
+        },
+        "checkList": [
+          "Mapeie o uso real de Python nos endpoints",
+          "Entenda quais automações já operam processos críticos",
+          "Identifique riscos e gaps de governança com base em evidência",
+          "Estruture controle contínuo sem travar o negócio"
+        ],
+        "actions": [
+          {
+            "type": "button",
+            "variant": "primary",
+            "text": "Solicitar Risk Assessment",
+            "href": "#form",
+            "hasArrowIcon": true
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "social-proof",
+      "type": "socialProof",
+      "padding": "80px 0",
+      "content": {
+        "label": "Empresas que confiam na BotCity",
+        "heading": "Mais de 1.000 empresas",
+        "subheading": "confiam na BotCity para governar Python em escala.",
+        "logos": [
+          { "src": "Assets BotCity/client logos/logo_bayer.svg", "alt": "Bayer" },
+          { "src": "Assets BotCity/client logos/LGE_Logo_HeritageRed_Grey_RGB.svg", "alt": "LG" },
+          { "src": "Assets BotCity/client logos/PicPay_Logo+Ticker.svg", "alt": "PicPay" },
+          { "src": "Assets BotCity/client logos/stone-seeklogo.svg", "alt": "Stone" }
+        ],
+        "logosTrackOpacity": 0.4,
+        "logosFilter": "brightness(0) invert(1)"
+      }
+    },
+
+    {
+      "id": "sentinel",
+      "type": "product",
+      "padding": "120px 0",
+      "layout": "twoColumnGrid",
+      "content": {
+        "visual": {
+          "type": "animatedComposition",
+          "layers": [
+            { "src": "Assets BotCity/sentinel_ID_-09.svg", "role": "lines", "opacity": 0.15, "animation": "linesRotate" },
+            { "src": "Assets BotCity/sentinel_ID_-06.svg", "role": "rings", "opacity": 0.25, "animation": "ringsCounterRotate" },
+            { "src": "Assets BotCity/sentinel_ID_-14.svg", "role": "eye", "animation": "eyeRotate", "width": "65%" }
+          ],
+          "maxWidth": "460px",
+          "aspectRatio": "1"
+        },
+        "text": {
+          "label": { "text": "Produto", "color": "#3d8bff" },
+          "title": "BotCity Sentinel",
+          "subtitle": "Primeiro agente de monitoramento para Python e AI",
+          "body": "O BotCity Sentinel monitora execuções reais de Python, identifica riscos e entrega controle sem bloquear quem usa Python de forma legítima.",
+          "features": [
+            {
+              "icon": "grid-plus",
+              "title": "Inventário completo",
+              "description": "Python + AI em execução — por área, usuário e máquina."
+            },
+            {
+              "icon": "chart-line",
+              "title": "Trilhas auditáveis",
+              "description": "Quem executou o quê, quando e com qual impacto."
+            },
+            {
+              "icon": "clipboard-check",
+              "title": "Score de conformidade",
+              "description": "Baseado nas suas políticas internas e boas práticas de segurança."
+            },
+            {
+              "icon": "document-report",
+              "title": "Relatório executivo",
+              "description": "Compliance com achados, severidade e recomendações priorizadas."
+            }
+          ],
+          "cta": {
+            "type": "button",
+            "variant": "primary",
+            "text": "Solicite seu Risk Assessment",
+            "href": "#form"
+          }
+        }
+      }
+    },
+
+    {
+      "id": "benefits",
+      "type": "benefits",
+      "padding": "120px 0",
+      "content": {
+        "header": {
+          "title": "O que muda quando você governa Python em escala",
+          "body": "Quando a governança está em operação, Python deixa de ser um ponto cego e passa a ser uma capacidade controlada da empresa."
+        },
+        "cards": [
+          {
+            "number": "01",
+            "icon": "star-sparkle",
+            "title": "Libere inovação com segurança operacional",
+            "text": "Permita que áreas usem Python e AI com controle real."
+          },
+          {
+            "number": "02",
+            "icon": "crosshair-target",
+            "title": "Tome decisões com base em evidência",
+            "text": "Entenda exatamente o que está rodando e qual o impacto."
+          },
+          {
+            "number": "03",
+            "icon": "document-lines",
+            "title": "Responda auditorias com confiança",
+            "text": "Tenha trilha completa de execução e conformidade."
+          },
+          {
+            "number": "04",
+            "icon": "shield",
+            "title": "Reduza risco sem bloquear produtividade",
+            "text": "Controle comportamento sem restringir uso."
+          },
+          {
+            "number": "05",
+            "icon": "pulse-chart",
+            "title": "Escale automação com consistência",
+            "text": "Transforme iniciativas locais em capacidade governada."
+          }
+        ],
+        "gridLayout": "repeat(auto-fit, minmax(320px, 1fr))"
+      }
+    },
+
+    {
+      "id": "exposure",
+      "type": "riskVectors",
+      "padding": "120px 0",
+      "content": {
+        "header": {
+          "label": "Vetores de risco",
+          "title": "Onde estão os principais pontos de exposição",
+          "body": "Esses vetores já existem em ambientes corporativos. O desafio é que o stack atual não observa o comportamento do código Python em execução."
+        },
+        "risks": [
+          {
+            "icon": "cloud-data-transfer",
+            "iconSrc": "Assets BotCity/icons/cloud-data-transfer--cloud-data-transfer-internet-server-network.svg",
+            "title": "Exfiltração de dados",
+            "text": "Envio de dados para APIs externas"
+          },
+          {
+            "icon": "warning-off",
+            "iconSrc": "Assets BotCity/icons/warning-off--warning-off-sign-triangle-notification-prevention.svg",
+            "title": "Violações regulatórias",
+            "text": "Ausência de trilha e controle"
+          },
+          {
+            "icon": "bug-virus-browser",
+            "iconSrc": "Assets BotCity/icons/bug-virus-browser--bug-browser-file-virus-threat-danger-internet.svg",
+            "title": "Pacotes maliciosos",
+            "text": "Dependências vulneráveis via pip"
+          },
+          {
+            "icon": "lock-keyhole",
+            "title": "Credenciais expostas",
+            "text": "Tokens e senhas no código"
+          },
+          {
+            "icon": "circle-alert",
+            "title": "Sem auditoria",
+            "text": "Falta de histórico de execução"
+          }
+        ],
+        "cta": {
+          "preText": "Veja onde estão esses pontos no seu ambiente",
+          "button": {
+            "variant": "primary",
+            "text": "Solicite um Risk Assessment",
+            "href": "#form"
+          }
+        },
+        "gridLayout": "repeat(auto-fit, minmax(200px, 1fr))"
+      }
+    },
+
+    {
+      "id": "form",
+      "type": "contactForm",
+      "padding": "120px 0",
+      "layout": "twoColumnGrid",
+      "content": {
+        "left": {
+          "label": "Diagnóstico",
+          "title": "Solicite um diagnóstico inicial do uso de Python",
+          "body": "Preencha o formulário para receber uma avaliação inicial do uso de Python nos seus endpoints.",
+          "trustSignals": [
+            "Dados protegidos e confidenciais",
+            "Sem compromisso — resposta em até 24h",
+            "Especialistas em governança Python"
+          ]
+        },
+        "right": {
+          "cardTitle": "Risk Assessment",
+          "cardSubtitle": "Preencha seus dados para iniciar.",
+          "hubspotEmbed": {
+            "scriptSrc": "https://js.hsforms.net/forms/embed/5323276.js",
+            "region": "na1",
+            "formId": "8694914f-2d90-460f-964e-6fc85e6f8944",
+            "portalId": "5323276"
+          }
+        }
+      }
+    },
+
+    {
+      "id": "footer",
+      "type": "footer",
+      "padding": "48px 0",
+      "content": {
+        "logo": {
+          "src": "Assets BotCity/SVG/LOGO_WHITE.svg",
+          "alt": "BotCity",
+          "height": "20px"
+        },
+        "text": "© 2026 BotCity. Todos os direitos reservados."
+      }
+    }
+  ],
+
+  "assets": {
+    "logos": [
+      { "name": "LOGO_WHITE", "path": "Assets BotCity/SVG/LOGO_WHITE.svg", "type": "svg" },
+      { "name": "LOGO_BLACK", "path": "Assets BotCity/SVG/LOGO_BLACK.svg", "type": "svg" },
+      { "name": "ICON_WHITE", "path": "Assets BotCity/SVG/ICON_WHITE.svg", "type": "svg" },
+      { "name": "ICON_BLACK", "path": "Assets BotCity/SVG/ICON_BLACK.svg", "type": "svg" },
+      { "name": "ICON_BLACK_2x", "path": "Assets BotCity/2x/ICON_BLACK@2x.png", "type": "png" }
+    ],
+    "sentinelVisuals": [
+      { "name": "sentinel_ID_-06", "path": "Assets BotCity/sentinel_ID_-06.svg", "role": "rings" },
+      { "name": "sentinel_ID_-07", "path": "Assets BotCity/sentinel_ID_-07.svg" },
+      { "name": "sentinel_ID_-08", "path": "Assets BotCity/sentinel_ID_-08.svg" },
+      { "name": "sentinel_ID_-09", "path": "Assets BotCity/sentinel_ID_-09.svg", "role": "lines" },
+      { "name": "sentinel_ID_-10", "path": "Assets BotCity/sentinel_ID_-10.svg" },
+      { "name": "sentinel_ID_-11", "path": "Assets BotCity/sentinel_ID_-11.svg" },
+      { "name": "sentinel_ID_-12", "path": "Assets BotCity/sentinel_ID_-12.svg" },
+      { "name": "sentinel_ID_-13", "path": "Assets BotCity/sentinel_ID_-13.svg" },
+      { "name": "sentinel_ID_-14", "path": "Assets BotCity/sentinel_ID_-14.svg", "role": "eye" },
+      { "name": "sentinel_ID_-15", "path": "Assets BotCity/sentinel_ID_-15.svg" },
+      { "name": "sentinel_ID_-16", "path": "Assets BotCity/sentinel_ID_-16.svg" },
+      { "name": "sentinel_ID_-17", "path": "Assets BotCity/sentinel_ID_-17.svg" },
+      { "name": "sentinel_ID_-18", "path": "Assets BotCity/sentinel_ID_-18.svg" },
+      { "name": "sentinel_ID_-19", "path": "Assets BotCity/sentinel_ID_-19.svg" },
+      { "name": "sentinel_ID_-20", "path": "Assets BotCity/sentinel_ID_-20.svg" },
+      { "name": "sentinel_ID_-21", "path": "Assets BotCity/sentinel_ID_-21.svg" },
+      { "name": "sentinel_ID_-22", "path": "Assets BotCity/sentinel_ID_-22.svg" },
+      { "name": "sentinel_ID_-23", "path": "Assets BotCity/sentinel_ID_-23.svg" }
+    ],
+    "clientLogos": [
+      { "name": "Bayer", "path": "Assets BotCity/client logos/logo_bayer.svg" },
+      { "name": "LG", "path": "Assets BotCity/client logos/LGE_Logo_HeritageRed_Grey_RGB.svg" },
+      { "name": "PicPay", "path": "Assets BotCity/client logos/PicPay_Logo+Ticker.svg" },
+      { "name": "Stone", "path": "Assets BotCity/client logos/stone-seeklogo.svg" }
+    ],
+    "icons": [
+      { "name": "bug-virus-browser", "path": "Assets BotCity/icons/bug-virus-browser--bug-browser-file-virus-threat-danger-internet.svg" },
+      { "name": "clipboard-check", "path": "Assets BotCity/icons/clipboard-check--checkmark-edit-task-edition-checklist-check-success-clipboard-form.svg" },
+      { "name": "cloud-data-transfer", "path": "Assets BotCity/icons/cloud-data-transfer--cloud-data-transfer-internet-server-network.svg" },
+      { "name": "location-target", "path": "Assets BotCity/icons/location-target-1--navigation-location-map-services-maps-gps-target.svg" },
+      { "name": "warning-off", "path": "Assets BotCity/icons/warning-off--warning-off-sign-triangle-notification-prevention.svg" }
+    ]
+  },
+
+  "interactions": {
+    "revealOnScroll": {
+      "observer": "IntersectionObserver",
+      "threshold": 0.12,
+      "rootMargin": "0px 0px -40px 0px",
+      "animationClass": "is-visible"
+    },
+    "navScrollBehavior": {
+      "scrollThreshold": 50,
+      "class": "is-scrolled"
+    },
+    "smoothScrollAnchors": true,
+    "parallax": {
+      "target": ".sentinel__visual",
+      "range": 30,
+      "axis": "Y"
+    }
+  },
+
+  "externalDependencies": {
+    "fonts": [
+      {
+        "name": "Inter",
+        "weights": [300, 400, 500, 600],
+        "provider": "Google Fonts",
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      },
+      {
+        "name": "Space Mono",
+        "weights": [400, 700],
+        "provider": "Google Fonts",
+        "url": "https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      }
+    ],
+    "forms": {
+      "provider": "HubSpot",
+      "scriptSrc": "https://js.hsforms.net/forms/embed/5323276.js",
+      "portalId": "5323276",
+      "formId": "8694914f-2d90-460f-964e-6fc85e6f8944",
+      "region": "na1"
+    }
+  },
+
+  "accessibility": {
+    "wcagLevel": "AA",
+    "contrastCompliant": true,
+    "minimumContrastRatio": {
+      "normalText": "4.5:1",
+      "largeText": "3:1",
+      "graphicalObjects": "3:1"
+    },
+    "ariaHiddenDecorations": true,
+    "semanticHTML": true
+  }
+}

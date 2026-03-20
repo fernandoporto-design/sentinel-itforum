@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .17;
+        stroke: #000a39;
+        stroke-width: 2.33px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        opacity: 0;
+        stroke: #000014;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        opacity: .33;
+        stroke: #00145d;
+        stroke-width: 2.67px;
+      }
+
+      .cls-4 {
+        opacity: .5;
+        stroke: #001e82;
+        stroke-width: 3px;
+      }
+
+      .cls-5 {
+        stroke: #003cf0;
+        stroke-width: 4px;
+      }
+
+      .cls-6 {
+        opacity: .67;
+        stroke: #0028a7;
+        stroke-width: 3.33px;
+      }
+
+      .cls-7 {
+        opacity: .83;
+        stroke: #0032cb;
+        stroke-width: 3.67px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-2" cx="300" cy="300" r="290"/>
+  <circle class="cls-1" cx="300" cy="300" r="245.75"/>
+  <circle class="cls-3" cx="300" cy="300" r="201.5"/>
+  <circle class="cls-4" cx="300" cy="300" r="157.25"/>
+  <circle class="cls-6" cx="300" cy="300" r="113"/>
+  <circle class="cls-7" cx="300" cy="300" r="68.75"/>
+  <circle class="cls-5" cx="300" cy="300" r="24.49"/>
+</svg>
