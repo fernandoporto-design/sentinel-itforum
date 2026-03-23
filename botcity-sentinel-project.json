@@ -25,7 +25,7 @@
       "fonts": {
         "title": "'Inter', sans-serif",
         "body": "'Inter', sans-serif",
-        "mono": "'Space Mono', monospace"
+        "mono": "'Google Sans Code', monospace"
       },
       "fontWeights": {
         "light": 300,
@@ -71,14 +71,14 @@
         "lineHeight": 1.7
       },
       "t-label": {
-        "fontFamily": "Space Mono",
+        "fontFamily": "Google Sans Code",
         "fontWeight": 400,
         "fontSize": "0.7rem",
         "letterSpacing": "0.14em",
         "textTransform": "uppercase"
       },
       "t-mono": {
-        "fontFamily": "Space Mono",
+        "fontFamily": "Google Sans Code",
         "fontWeight": 400
       }
     },
@@ -98,7 +98,7 @@
     "button": {
       "base": {
         "padding": "16px 36px",
-        "fontFamily": "Space Mono",
+        "fontFamily": "Google Sans Code",
         "fontSize": "0.72rem",
         "fontWeight": 700,
         "letterSpacing": "0.12em",
@@ -131,7 +131,7 @@
 
     "navCta": {
       "padding": "10px 24px",
-      "fontFamily": "Space Mono",
+      "fontFamily": "Google Sans Code",
       "fontSize": "0.7rem",
       "letterSpacing": "0.1em",
       "textTransform": "uppercase",
@@ -548,7 +548,7 @@
         "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
       },
       {
-        "name": "Space Mono",
+        "name": "Google Sans Code",
         "weights": [400, 700],
         "provider": "Google Fonts",
         "url": "https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
